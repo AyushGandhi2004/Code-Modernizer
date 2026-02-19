@@ -1,0 +1,13 @@
+-> Can implement an extra check in the tester that run the original and the new code and check if their outputs
+    are same or not.
+
+->Implement pydentic in the output format
+
+->Implement RAG for providing specific Documentations of particular languages that are new and llm helucinates for that
+
+->Can make it available for more languages and framework
+
+->Can make it a MCP Server so that different llms can use it as tool
+
+Highlights:
+-Streaming langgraph used  and therefore streamingAPI calls used

@@ -1,0 +1,71 @@
+# grades_legacy.py
+
+import sys
+
+def calculate_average(scores):
+    total = 0
+    for i in xrange(len(scores)):
+        total += scores[i]
+    return total / len(scores)
+
+def find_highest(scores):
+    highest = scores[0]
+    for score in scores:
+        if score > highest:
+            highest = score
+    return highest
+
+def find_lowest(scores):
+    lowest = scores[0]
+    for score in scores:
+        if score < lowest:
+            lowest = score
+    return lowest
+
+def display_report(student, scores):
+    print "\nReport for %s" % student
+    print "Scores:", scores
+    print "Average:", calculate_average(scores)
+    print "Highest:", find_highest(scores)
+    print "Lowest:", find_lowest(scores)
+
+def main():
+    students = {}
+
+    while True:
+        print "\n1. Add Student"
+        print "2. Show Report"
+        print "3. Exit"
+
+        choice = raw_input("Choice: ")
+
+        if choice == "1":
+            name = raw_input("Student name: ")
+            scores_input = raw_input("Enter comma-separated scores: ")
+            scores = scores_input.split(",")
+            int_scores = []
+
+            for s in scores:
+                try:
+                    int_scores.append(int(s))
+                except:
+                    print "Invalid score:", s
+
+            students[name] = int_scores
+            print "Student added"
+
+        elif choice == "2":
+            name = raw_input("Student name: ")
+            if students.has_key(name):
+                display_report(name, students[name])
+            else:
+                print "Student not found"
+
+        elif choice == "3":
+            break
+
+        else:
+            print "Invalid option"
+
+if __name__ == "__main__":
+    main()

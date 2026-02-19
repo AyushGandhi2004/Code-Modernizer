@@ -1,0 +1,46 @@
+# downloader_legacy.py
+# Python 2.x downloader using urllib2
+
+import urllib2
+import os
+
+def download_file(url, save_path):
+    try:
+        response = urllib2.urlopen(url)
+        data = response.read()
+
+        f = open(save_path, "wb")
+        f.write(data)
+        f.close()
+
+        print "Downloaded successfully:", save_path
+
+    except urllib2.URLError, e:
+        print "URL Error:", e
+    except Exception, e:
+        print "General Error:", e
+
+def batch_download(url_list):
+    for i in xrange(len(url_list)):
+        url = url_list[i]
+        filename = "file_%d.txt" % i
+        download_file(url, filename)
+
+def main():
+    print "Simple Downloader"
+    urls = []
+
+    while True:
+        url = raw_input("Enter URL (or type done): ")
+        if url == "done":
+            break
+        urls.append(url)
+
+    if len(urls) == 0:
+        print "No URLs provided"
+        return
+
+    batch_download(urls)
+
+if __name__ == "__main__":
+    main()
