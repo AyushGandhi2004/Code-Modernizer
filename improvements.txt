@@ -1,13 +1,21 @@
+IMPROVEMENTS :
 -> Can implement an extra check in the tester that run the original and the new code and check if their outputs
     are same or not.
-
-->Implement pydentic in the output format
 
 ->Implement RAG for providing specific Documentations of particular languages that are new and llm helucinates for that
 
 ->Can make it available for more languages and framework
 
 ->Can make it a MCP Server so that different llms can use it as tool
+
+->Can add PII detection i.e lets say the code file has a API key hardcoded in it, then the PII layer will replace it and map it with some variable and at the end before delivering it will replace it again
+
+->Can implement github tools like we give a link of github repo in input and it will convert the complete codebas in the repo into newer version. i think this can be done by making this a MCP server and then can work as tool for github
+
+
+
+
+
 
 Highlights:
 -Streaming langgraph used  and therefore streamingAPI calls used

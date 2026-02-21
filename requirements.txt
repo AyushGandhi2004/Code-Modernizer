@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+CORSMiddleware
+router
+python-multipart
+pydantic
+asyncio
+json
+langchain
+langchain-groq
+langgraph
+groq
+re
+dotenv
+subprocess
+tempfile
