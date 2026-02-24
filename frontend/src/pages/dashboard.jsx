@@ -212,7 +212,7 @@ export default function Dashboard() {
                 <option value="python">Python</option>
                 <option value="javascript">JavaScript</option>
                 <option value="typescript">TypeScript</option>
-                <option value="java">Java</option>
+                {/* <option value="java">Java</option>
                 <option value="go">Go</option>
                 <option value="rust">Rust</option>
                 <option value="c">C</option>
@@ -222,7 +222,7 @@ export default function Dashboard() {
                 <option value="ruby">Ruby</option>
                 <option value="r">R</option>
                 <option value="bash">Bash</option>
-                <option value="powershell">PowerShell</option>
+                <option value="powershell">PowerShell</option> */}
               </select>
             </div>
 
