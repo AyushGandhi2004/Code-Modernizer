@@ -25,7 +25,8 @@ dist-ssr
 *.sln
 *.sw?
 
-
+backend/py_cm/
+py_cm/
 cap/
 env/
 *.env
